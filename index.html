@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shawarman by Dany - Précommandez votre shawarma classique au prix de 1 000 FCFA. Retrait sur place.">
+  <title>Shawarman by Dany | Commande en ligne</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#accueil">🥙 <span>Shawarman</span> by Dany</a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#commande">Commander</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="hero-content">
+        <p class="eyebrow">🥙 Frais • Savoureux • Sur commande</p>
+        <h1>Ton shawarma,<br><span>préparé pour toi.</span></h1>
+        <p class="hero-text">
+          Commande ton shawarma au moins <strong>4 heures à l'avance</strong>
+          et récupère-le directement sur place.
+        </p>
+        <a class="btn btn-primary" href="#commande">Commander maintenant →</a>
+      </div>
+      <div class="hero-card">
+        <div class="shawarma-illustration">🥙</div>
+        <div>
+          <p>Shawarman classique</p>
+          <strong>1 000 FCFA</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">Notre menu</p>
+        <h2>Simple. Bon. Accessible.</h2>
+      </div>
+
+      <article class="product-card">
+        <div class="product-image">🥙</div>
+        <div class="product-info">
+          <div class="product-title-row">
+            <h3>Shawarman classique</h3>
+            <span>1 000 FCFA</span>
+          </div>
+          <p>Un shawarma savoureux, préparé avec soin et prêt à être récupéré à l'heure choisie.</p>
+          <div class="quantity">
+            <button type="button" onclick="changeQty(-1)">−</button>
+            <span id="qty">1</span>
+            <button type="button" onclick="changeQty(1)">+</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section order-section" id="commande">
+      <div class="section-heading">
+        <p class="eyebrow">Précommande</p>
+        <h2>Réserve ton shawarma</h2>
+        <p>Choisis une heure située au minimum 4 heures après maintenant.</p>
+      </div>
+
+      <form id="orderForm" class="order-form">
+        <div class="form-grid">
+          <label>
+            Nom complet
+            <input id="name" type="text" placeholder="Ex. Jean François" required>
+          </label>
+
+          <label>
+            Numéro de téléphone
+            <input id="phone" type="tel" placeholder="Ex. 6XXXXXXXX" required>
+          </label>
+
+          <label>
+            Date de retrait
+            <input id="date" type="date" required>
+          </label>
+
+          <label>
+            Heure de retrait
+            <input id="time" type="time" required>
+          </label>
+        </div>
+
+        <label>
+          Note (facultatif)
+          <textarea id="note" rows="3" placeholder="Une précision pour ta commande..."></textarea>
+        </label>
+
+        <div class="order-summary">
+          <div>
+            <span>Shawarman classique</span>
+            <strong id="summaryQty">1 × 1 000 FCFA</strong>
+          </div>
+          <div class="total">
+            <span>Total</span>
+            <strong id="total">1 000 FCFA</strong>
+          </div>
+        </div>
+
+        <p id="error" class="error" role="alert"></p>
+
+        <button class="btn btn-whatsapp" type="submit">
+          💬 Commander sur WhatsApp
+        </button>
+        <p class="small">Ta commande sera préparée dans un message WhatsApp prêt à être envoyé.</p>
+      </form>
+    </section>
+
+    <section class="info-strip">
+      <div><span>⏰</span><strong>4 h minimum</strong><small>Précommande</small></div>
+      <div><span>📍</span><strong>Sur place</strong><small>Retrait de la commande</small></div>
+      <div><span>💬</span><strong>WhatsApp</strong><small>Confirmation rapide</small></div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div>
+        <p class="eyebrow">Contact</p>
+        <h2>Une question ?</h2>
+        <p>Contacte Shawarman by Dany directement sur WhatsApp.</p>
+      </div>
+      <a class="btn btn-outline" id="contactWhatsapp" href="#" target="_blank" rel="noopener">Ouvrir WhatsApp</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Shawarman by Dany. Tous droits réservés.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
